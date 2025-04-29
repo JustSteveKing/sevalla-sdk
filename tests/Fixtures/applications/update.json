@@ -1,0 +1,15 @@
+{
+  "app": {
+    "id": "54fb80af-576c-4fdc-ba4f-b596c83f15a1",
+    "name": "my-app",
+    "status": "deploymentInProgress",
+    "updated_at": 1695300630620,
+    "build_path": "dist",
+    "build_type": "dockerfile",
+    "docker_file_path": "Dockerfile",
+    "docker_context": ".",
+    "display_name": "My App",
+    "auto_deploy": true,
+    "default_branch": "main"
+  }
+}

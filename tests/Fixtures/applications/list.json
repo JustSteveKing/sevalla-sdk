@@ -1,0 +1,14 @@
+{
+  "company": {
+    "apps": {
+      "items": [
+        {
+          "id": "54fb80af-576c-4fdc-ba4f-b596c83f15a1",
+          "name": "unique-name",
+          "display_name": "firstsite",
+          "status": "deploymentSuccess"
+        }
+      ]
+    }
+  }
+}

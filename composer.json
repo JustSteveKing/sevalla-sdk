@@ -1,0 +1,56 @@
+{
+    "name": "juststeveking/sevalla-sdk",
+    "description": "The unofficial PHP SDK for Sevalla's REST API",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "JustSteveKing\\Sevalla\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Steve McDougall",
+            "email": "juststevemcd@gmail.com",
+            "homepage": "https://juststeveking.link"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.4",
+        "saloonphp/saloon": "^3.0",
+        "saloonphp/pagination-plugin": "^2.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpstan/phpstan": "2.1.x-dev",
+        "laravel/pint": "dev-main",
+        "jonpurvis/lawman": "dev-master",
+        "pestphp/pest": "3.x-dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "lint": [
+            "./vendor/bin/pint --test"
+        ],
+        "pint": [
+            "./vendor/bin/pint"
+        ],
+        "stan": [
+            "./vendor/bin/phpstan analyse --memory-limit=2G"
+        ],
+        "test": [
+            "./vendor/bin/pest"
+        ]
+    }
+}
