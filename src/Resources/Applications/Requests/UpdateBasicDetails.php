@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace JustSteveKing\Sevalla\Resources\Applications\Requests;
 
+use JsonException;
 use JustSteveKing\Sevalla\Enums\BuildType;
 use JustSteveKing\Sevalla\Resources\Applications\Application;
 use JustSteveKing\Sevalla\Resources\Applications\Payloads\UpdateApplication;
@@ -29,9 +30,18 @@ final class UpdateBasicDetails extends Request implements HasBody
         return "/applications/{$this->id}";
     }
 
+    /**
+     * @param Response $response
+     * @return Application
+     * @throws JsonException
+     */
     public function createDtoFromResponse(Response $response): Application
     {
         $data = $response->json();
+
+        if ( ! is_array($data['app'])) {
+            throw new JsonException('Invalid response from API');
+        }
 
         return new Application(
             id: $data['app']['id'],
