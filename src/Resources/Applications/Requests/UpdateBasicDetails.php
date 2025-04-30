@@ -39,7 +39,7 @@ final class UpdateBasicDetails extends Request implements HasBody
     {
         $data = $response->json();
 
-        if ( ! is_array($data['app']['id'])) {
+        if ( ! is_array($data['app'])) {
             throw new JsonException('Invalid response from API');
         }
 
